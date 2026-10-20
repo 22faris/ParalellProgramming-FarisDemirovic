@@ -16,3 +16,6 @@ To measure performance generate a roofline graph.
 
 ## Results 
 Measured FP64 performance was 119.3 GFLOP/s, and DRAM bandwidth was 17.5 GB/s.
+
+## Cloverleaf & Likwid
+Both cloverleaf and likwid failed to run due to memory space on the device.
