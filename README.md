@@ -4,10 +4,6 @@
 
 This assignment explores memory organization, matrix allocation, and performance of different data layouts.
 
-- ### example_1,2:
-Contains first two tasks from lab 04. 
-Matrix allocation using fragmented memory.
-Matrix allocation using contiguous memory.
 - ### example_3:
 Contains an array of structures of arrays(AoSoA).
 A benchmark measuring initialization time for different vector lengths and dataset sizes.
