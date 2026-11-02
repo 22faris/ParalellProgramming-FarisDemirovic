@@ -17,7 +17,7 @@ all: $(TARGET)
 # $@ means "the target" (sum_test)
 $(TARGET): $(OBJECTS)
 	@echo "Linking $(TARGET)..."
-	$(CC) $(OBJECTS) -o $(TARGET)
+	$(CC) $(OBJECTS) -o $(TARGET) -lm
 
 # Rule to compile .c files into .o files
 # This pattern rule applies to any .c file

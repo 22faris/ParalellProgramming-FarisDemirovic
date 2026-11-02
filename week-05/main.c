@@ -9,6 +9,8 @@
 
 #define ORDERS_OF_MAGNITUDE 1.0e9
 
+typedef double(*sum_function)(double *, long);
+
 void cpu_timer_start(struct timespec *tstart_cpu) {
    clock_gettime(CLOCK_MONOTONIC, tstart_cpu);
 }
@@ -24,6 +26,34 @@ double cpu_timer_stop(struct timespec tstart_cpu) {
    double result = (double)tresult.tv_sec + (double)tresult.tv_nsec * 1.0e-9;
 
    return result;
+}
+
+void print_result(const char *method,
+                  long double sum,
+                  long double accurate_sum,
+                  double runtime)
+{
+   long double error = fabsl(sum - accurate_sum);
+   long double relative_error = error / fabsl(accurate_sum);
+
+   printf("%-15s | %-20.12Le | %-15.6Le | %.9f seconds\n",
+          method, error, relative_error, runtime);
+}
+
+/* Execute and measure a double-precision summation method */
+void test_method(const char *name,
+                 sum_function function,
+                 double *energy,
+                 long ncells,
+                 long double accurate_sum)
+{
+   struct timespec timer;
+
+   cpu_timer_start(&timer);
+   double result = function(energy, ncells);
+   double runtime = cpu_timer_stop(timer);
+
+   print_result(name, (long double)result, accurate_sum, runtime);
 }
 
 int main(int argc, char *argv[])
@@ -51,8 +81,7 @@ int main(int argc, char *argv[])
       double high_value = 1.0e-1;
       double low_value  = 1.0e-1 / ORDERS_OF_MAGNITUDE;
 
-      double accurate_sum = (double)ncellsdiv2 * high_value +
-                            (double)ncellsdiv2 * low_value;
+      long double accurate_sum = 0.0L;
 
       double *energy = (double *)malloc(ncells * sizeof(double));
 
@@ -66,20 +95,32 @@ int main(int argc, char *argv[])
          energy[i] = (i < ncellsdiv2) ? high_value : low_value;
       }
 
-      printf("Expected accurate sum: %-17.16lg\n\n", accurate_sum);
+      for (long i = 0;i < ncells; i++) {
+         accurate_sum += (long double)energy[i];
+      }
 
-      double test_sum;
-      struct timespec cpu_timer;
-      double cpu_time;
+      printf("Expected accurate sum: %.15Lf\n\n", accurate_sum);
 
-      cpu_timer_start(&cpu_timer);
-      test_sum = do_sum(energy, ncells);
-      cpu_time = cpu_timer_stop(cpu_timer);
+      // Standard double summation
+      test_method("Standard double", do_sum,energy, ncells, accurate_sum);
 
-      printf("  accurate sum %-17.16lg sum %-17.16lg diff %10.4lg relative diff %10.4lg runtime %lf",
-             accurate_sum, test_sum, test_sum - accurate_sum,
-             (test_sum - accurate_sum) / accurate_sum, cpu_time);
-      printf("   Standard double sum\n");
+      // Long double sum
+      struct timespec timer;
+
+      cpu_timer_start(&timer);
+      long double id_result = do_ldsum(energy, ncells);
+      double ld_runtime = cpu_timer_stop(timer);
+
+      print_result("long double", id_result, accurate_sum, ld_runtime);
+
+      // Pairwise sum
+      test_method("Pairwise",do_pair_sum,energy, ncells, accurate_sum);
+
+      // Kahan sum
+      test_method("Kahan",do_kahan_sum,energy, ncells, accurate_sum);
+
+      // Knuth sum
+      test_method("Knuth", do_knuth_sum,energy, ncells, accurate_sum);
 
       free(energy);
       printf("\n");

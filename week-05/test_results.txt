@@ -1,0 +1,221 @@
+========================================
+
+========================================
+TESTING WITH 2^10 = 1024 elements
+========================================
+Initializing array (Leblanc problem: high values first, then low values)
+Expected accurate sum: 51.200000051200004
+
+Standard double | 1.367794766338e-12   | 2.671474e-14    | 0.000002566 seconds
+long double     | 0.000000000000e+00   | 0.000000e+00    | 0.000003057 seconds
+Pairwise        | 3.552713678801e-15   | 6.938894e-17    | 0.000004567 seconds
+Kahan           | 3.552713678801e-15   | 6.938894e-17    | 0.000006276 seconds
+Knuth           | 3.552713678801e-15   | 6.938894e-17    | 0.000013273 seconds
+
+========================================
+TESTING WITH 2^11 = 2048 elements
+========================================
+Initializing array (Leblanc problem: high values first, then low values)
+Expected accurate sum: 102.400000102400007
+
+Standard double | 2.771116669464e-13   | 2.706169e-15    | 0.000004915 seconds
+long double     | 0.000000000000e+00   | 0.000000e+00    | 0.000005493 seconds
+Pairwise        | 7.105427357601e-15   | 6.938894e-17    | 0.000010867 seconds
+Kahan           | 7.105427357601e-15   | 6.938894e-17    | 0.000012487 seconds
+Knuth           | 7.105427357601e-15   | 6.938894e-17    | 0.000026510 seconds
+
+========================================
+TESTING WITH 2^12 = 4096 elements
+========================================
+Initializing array (Leblanc problem: high values first, then low values)
+Expected accurate sum: 204.800000204800000
+
+Standard double | 3.279865268269e-11   | 1.601497e-13    | 0.000009773 seconds
+long double     | 0.000000000000e+00   | 0.000000e+00    | 0.000011949 seconds
+Pairwise        | 0.000000000000e+00   | 0.000000e+00    | 0.000015449 seconds
+Kahan           | 0.000000000000e+00   | 0.000000e+00    | 0.000024875 seconds
+Knuth           | 0.000000000000e+00   | 0.000000e+00    | 0.000052977 seconds
+
+========================================
+TESTING WITH 2^13 = 8192 elements
+========================================
+Initializing array (Leblanc problem: high values first, then low values)
+Expected accurate sum: 409.600000409600057
+
+Standard double | 2.631850293255e-11   | 6.425416e-14    | 0.000019539 seconds
+long double     | 0.000000000000e+00   | 0.000000e+00    | 0.000063413 seconds
+Pairwise        | 5.684341886081e-14   | 1.387779e-16    | 0.000031650 seconds
+Kahan           | 5.684341886081e-14   | 1.387779e-16    | 0.000049753 seconds
+Knuth           | 5.684341886081e-14   | 1.387779e-16    | 0.000105904 seconds
+
+========================================
+TESTING WITH 2^14 = 16384 elements
+========================================
+Initializing array (Leblanc problem: high values first, then low values)
+Expected accurate sum: 819.200000819200028
+
+Standard double | 4.815490228793e-10   | 5.878284e-13    | 0.000039063 seconds
+long double     | 0.000000000000e+00   | 0.000000e+00    | 0.000047594 seconds
+Pairwise        | 2.842170943040e-14   | 3.469447e-17    | 0.000069922 seconds
+Kahan           | 2.842170943040e-14   | 3.469447e-17    | 0.000099450 seconds
+Knuth           | 2.842170943040e-14   | 3.469447e-17    | 0.000211807 seconds
+
+========================================
+TESTING WITH 2^15 = 32768 elements
+========================================
+Initializing array (Leblanc problem: high values first, then low values)
+Expected accurate sum: 1638.400001638399914
+
+Standard double | 3.331876996526e-10   | 2.033616e-13    | 0.000084175 seconds
+long double     | 0.000000000000e+00   | 0.000000e+00    | 0.000086645 seconds
+Pairwise        | 8.526512829121e-14   | 5.204170e-17    | 0.000688102 seconds
+Kahan           | 8.526512829121e-14   | 5.204170e-17    | 0.000235438 seconds
+Knuth           | 8.526512829121e-14   | 5.204170e-17    | 0.000431168 seconds
+
+========================================
+TESTING WITH 2^16 = 65536 elements
+========================================
+Initializing array (Leblanc problem: high values first, then low values)
+Expected accurate sum: 3276.800003276801050
+
+Standard double | 4.303331024857e-10   | 1.313272e-13    | 0.000222791 seconds
+long double     | 0.000000000000e+00   | 0.000000e+00    | 0.000173269 seconds
+Pairwise        | 1.051603248925e-12   | 3.209238e-16    | 0.000217401 seconds
+Kahan           | 1.051603248925e-12   | 3.209238e-16    | 0.000746713 seconds
+Knuth           | 1.051603248925e-12   | 3.209238e-16    | 0.001621811 seconds
+
+========================================
+TESTING WITH 2^17 = 131072 elements
+========================================
+Initializing array (Leblanc problem: high values first, then low values)
+Expected accurate sum: 6553.600006553604231
+
+Standard double | 9.217131946571e-09   | 1.406423e-12    | 0.000311263 seconds
+long double     | 0.000000000000e+00   | 0.000000e+00    | 0.000321758 seconds
+Pairwise        | 4.234834705130e-12   | 6.461845e-16    | 0.002599613 seconds
+Kahan           | 4.234834705130e-12   | 6.461845e-16    | 0.000901348 seconds
+Knuth           | 4.234834705130e-12   | 6.461845e-16    | 0.002220630 seconds
+
+========================================
+TESTING WITH 2^18 = 262144 elements
+========================================
+Initializing array (Leblanc problem: high values first, then low values)
+Expected accurate sum: 13107.200013107188767
+
+Standard double | 3.598538000915e-08   | 2.745467e-12    | 0.000636539 seconds
+long double     | 0.000000000000e+00   | 0.000000e+00    | 0.000794695 seconds
+Pairwise        | 1.122657522501e-11   | 8.565197e-16    | 0.000976617 seconds
+Kahan           | 1.122657522501e-11   | 8.565197e-16    | 0.002003396 seconds
+Knuth           | 1.122657522501e-11   | 8.565197e-16    | 0.006314843 seconds
+
+========================================
+TESTING WITH 2^19 = 524288 elements
+========================================
+Initializing array (Leblanc problem: high values first, then low values)
+Expected accurate sum: 26214.400026214343285
+
+Standard double | 5.661146644798e-07   | 2.159556e-11    | 0.001823231 seconds
+long double     | 0.000000000000e+00   | 0.000000e+00    | 0.004906722 seconds
+Pairwise        | 5.670131031366e-11   | 2.162983e-15    | 0.002672406 seconds
+Kahan           | 5.670131031366e-11   | 2.162983e-15    | 0.005075969 seconds
+Knuth           | 5.670131031366e-11   | 2.162983e-15    | 0.008478772 seconds
+
+========================================
+TESTING WITH 2^20 = 1048576 elements
+========================================
+Initializing array (Leblanc problem: high values first, then low values)
+Expected accurate sum: 52428.800052428070245
+
+Standard double | 4.952474625952e-07   | 9.446096e-12    | 0.002525384 seconds
+long double     | 0.000000000000e+00   | 0.000000e+00    | 0.003073701 seconds
+Pairwise        | 7.297273896256e-10   | 1.391845e-14    | 0.004921654 seconds
+Kahan           | 7.297273896256e-10   | 1.391845e-14    | 0.006389879 seconds
+Knuth           | 7.297273896256e-10   | 1.391845e-14    | 0.013742338 seconds
+
+========================================
+TESTING WITH 2^21 = 2097152 elements
+========================================
+Initializing array (Leblanc problem: high values first, then low values)
+Expected accurate sum: 104857.600104860413609
+
+Standard double | 3.566742037719e-06   | 3.401510e-11    | 0.005114172 seconds
+long double     | 0.000000000000e+00   | 0.000000e+00    | 0.005693808 seconds
+Pairwise        | 2.813663968482e-09   | 2.683319e-14    | 0.008162457 seconds
+Kahan           | 2.813663968482e-09   | 2.683319e-14    | 0.012994826 seconds
+Knuth           | 2.813663968482e-09   | 2.683319e-14    | 0.027475632 seconds
+
+========================================
+TESTING WITH 2^22 = 4194304 elements
+========================================
+Initializing array (Leblanc problem: high values first, then low values)
+Expected accurate sum: 209715.200209715787111
+
+Standard double | 1.889118507847e-05   | 9.008019e-11    | 0.010480162 seconds
+long double     | 0.000000000000e+00   | 0.000000e+00    | 0.016825488 seconds
+Pairwise        | 5.872209385416e-10   | 2.800088e-15    | 0.017618031 seconds
+Kahan           | 5.872209385416e-10   | 2.800088e-15    | 0.037035007 seconds
+Knuth           | 5.872209385416e-10   | 2.800088e-15    | 0.056243876 seconds
+
+========================================
+TESTING WITH 2^23 = 8388608 elements
+========================================
+Initializing array (Leblanc problem: high values first, then low values)
+Expected accurate sum: 419430.400419363204179
+
+Standard double | 4.306781406171e-05   | 1.026817e-10    | 0.021195195 seconds
+long double     | 0.000000000000e+00   | 0.000000e+00    | 0.022908004 seconds
+Pairwise        | 6.719560019519e-08   | 1.602068e-13    | 0.043021139 seconds
+Kahan           | 6.719560019519e-08   | 1.602068e-13    | 0.051548178 seconds
+Knuth           | 6.719560019519e-08   | 1.602068e-13    | 0.107052859 seconds
+
+========================================
+TESTING WITH 2^24 = 16777216 elements
+========================================
+Initializing array (Leblanc problem: high values first, then low values)
+Expected accurate sum: 838860.800838807049900
+
+Standard double | 1.424896834124e-05   | 1.698609e-11    | 0.040782744 seconds
+long double     | 0.000000000000e+00   | 0.000000e+00    | 0.046920611 seconds
+Pairwise        | 5.374965894589e-08   | 6.407459e-14    | 0.073757663 seconds
+Kahan           | 5.374965894589e-08   | 6.407459e-14    | 0.101646528 seconds
+Knuth           | 5.374965894589e-08   | 6.407459e-14    | 0.223555511 seconds
+
+========================================
+TESTING WITH 2^25 = 33554432 elements
+========================================
+Initializing array (Leblanc problem: high values first, then low values)
+Expected accurate sum: 1677721.601678708020358
+
+Standard double | 1.265105243533e-03   | 7.540615e-10    | 0.088392034 seconds
+long double     | 0.000000000000e+00   | 0.000000e+00    | 0.098294420 seconds
+Pairwise        | 9.864212415778e-07   | 5.879529e-13    | 0.174410922 seconds
+Kahan           | 9.864212415778e-07   | 5.879529e-13    | 0.236940493 seconds
+Knuth           | 9.864212415778e-07   | 5.879529e-13    | 0.489770281 seconds
+
+========================================
+TESTING WITH 2^26 = 67108864 elements
+========================================
+Initializing array (Leblanc problem: high values first, then low values)
+Expected accurate sum: 3355443.203356125775372
+
+Standard double | 1.380022998546e-03   | 4.112789e-10    | 0.177968452 seconds
+long double     | 0.000000000000e+00   | 0.000000e+00    | 0.216973496 seconds
+Pairwise        | 6.825771379226e-07   | 2.034238e-13    | 0.473975765 seconds
+Kahan           | 6.825771379226e-07   | 2.034238e-13    | 0.557729591 seconds
+Knuth           | 6.825771379226e-07   | 2.034238e-13    | 0.907836354 seconds
+
+========================================
+TESTING WITH 2^27 = 134217728 elements
+========================================
+Initializing array (Leblanc problem: high values first, then low values)
+Expected accurate sum: 6710886.406710007611309
+
+Standard double | 1.332765483448e-02   | 1.985975e-09    | 0.362688286 seconds
+long double     | 0.000000000000e+00   | 0.000000e+00    | 0.399531176 seconds
+Pairwise        | 8.787851584202e-07   | 1.309492e-13    | 1.777990524 seconds
+Kahan           | 8.787851584202e-07   | 1.309492e-13    | 1.237404611 seconds
+Knuth           | 8.787851584202e-07   | 1.309492e-13    | 1.939925612 seconds
+
+========================================
+All tests complete!
+========================================
