@@ -32,6 +32,7 @@ Pairwise, kahan, knuth summing produce smaller errors than standard double. Thei
 ### Compile and Execution
 
 make clean 
+
 make 
 
 Run tests:
