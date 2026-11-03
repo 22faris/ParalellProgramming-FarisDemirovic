@@ -29,6 +29,15 @@ Rounding errors can occur, especially when adding nummbers with significantly di
 
 Pairwise, kahan, knuth summing produce smaller errors than standard double. Their calculations can increase execution time.
 
+### Compile and Execution
+
+make clean 
+make 
+
+Run tests:
+
+./sum_tests
+
 ---
 
 ## Global Sum and Parallelization
