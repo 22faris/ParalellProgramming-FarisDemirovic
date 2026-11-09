@@ -1,0 +1,12 @@
+gcc -g -O3 -fstrict-aliasing -ftree-vectorize -fopenmp-simd -march=native -mtune=native -mprefer-vector-width=256 -fopt-info-vec-optimized -fopt-info-vec-missed   -c -o main.o main.c
+main.c:10:22: optimized: loop vectorized using 32 byte vectors
+main.c:20:15: missed: statement clobbers memory: mymindt_6 = timestep (10000000, 9.800000000000000710542735760100185871124267578125e+0, 9.499999999999999555910790149937383830547332763671875e-1, &celltype, &H, &U, &V, &dx, &dy);
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:118:10: missed: statement clobbers memory: __printf_chk (2, "Minimum dt is %lf\n", mymindt_6);
+gcc -g -O3 -fstrict-aliasing -ftree-vectorize -fopenmp-simd -march=native -mtune=native -mprefer-vector-width=256 -fopt-info-vec-optimized -fopt-info-vec-missed   -c -o timestep.o timestep.c
+timestep.c:9:22: missed: couldn't vectorize loop
+timestep.c:9:22: missed: not vectorized: unsupported control flow in loop.
+timestep.c:11:25: missed: statement clobbers memory: wavespeed_46 = sqrt (_8);
+gcc -g -O3 -fstrict-aliasing -ftree-vectorize -fopenmp-simd -march=native -mtune=native -mprefer-vector-width=256 -fopt-info-vec-optimized -fopt-info-vec-missed   -c -o timer.o timer.c
+timer.c:9:5: missed: statement clobbers memory: clock_gettime (1, tstart_cpu_2(D));
+timer.c:14:5: missed: statement clobbers memory: clock_gettime (1, &tstop_cpu);
+gcc -g -O3 -fstrict-aliasing -ftree-vectorize -fopenmp-simd -march=native -mtune=native -mprefer-vector-width=256 -fopt-info-vec-optimized -fopt-info-vec-missed -o stream_triad main.o timestep.o timer.o -lm

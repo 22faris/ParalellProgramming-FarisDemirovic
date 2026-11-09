@@ -1,0 +1,39 @@
+--------------------------------------------------------------------------------
+CPU name:	11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz
+CPU type:	Intel Tigerlake processor
+CPU clock:	2.42 GHz
+WARN: Counter PMC0 is only available with deactivated HyperThreading. Counter results defaults to 0.
+WARN: Counter PMC1 is only available with deactivated HyperThreading. Counter results defaults to 0.
+WARN: Counter PMC2 is only available with deactivated HyperThreading. Counter results defaults to 0.
+WARN: Counter PMC3 is only available with deactivated HyperThreading. Counter results defaults to 0.
+--------------------------------------------------------------------------------
+Minimum dt is 0.016964
+--------------------------------------------------------------------------------
+Group 1: FLOPS_DP
++------------------------------------------+---------+------------+
+|                   Event                  | Counter | HWThread 0 |
++------------------------------------------+---------+------------+
+|             INSTR_RETIRED_ANY            |  FIXC0  |          0 |
+|           CPU_CLK_UNHALTED_CORE          |  FIXC1  |          0 |
+|           CPU_CLK_UNHALTED_REF           |  FIXC2  |          0 |
+| FP_ARITH_INST_RETIRED_128B_PACKED_DOUBLE |   PMC0  |      -     |
+|    FP_ARITH_INST_RETIRED_SCALAR_DOUBLE   |   PMC1  |      -     |
+| FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE |   PMC2  |      -     |
+| FP_ARITH_INST_RETIRED_512B_PACKED_DOUBLE |   PMC3  |      -     |
++------------------------------------------+---------+------------+
+
++-------------------------+------------+
+|          Metric         | HWThread 0 |
++-------------------------+------------+
+|   Runtime (RDTSC) [s]   |     0.4125 |
+|   Runtime unhalted [s]  |          0 |
+|       Clock [MHz]       |          0 |
+|           CPI           |          0 |
+|       DP [MFLOP/s]      |          0 |
+|     AVX DP [MFLOP/s]    |          0 |
+|   AVX512 DP [MFLOP/s]   |          0 |
+|     Packed [MUOPS/s]    |          0 |
+|     Scalar [MUOPS/s]    |          0 |
+| Vectorization ratio [%] |          0 |
++-------------------------+------------+
+
