@@ -1,0 +1,20 @@
+OpenMP stencil results
+
+Environment:
+Processor - intel core i5-1135G7
+CPUs: 4
+OpenMP threads: 4
+compiler:gcc
+optimization level 02
+iterations 10000
+
+original(opt2): run 1: 215.715404  run 2: 179.836809 run 3: 183.839264
+
+opt 4: run 1: 176.336175  run 2: 181.226372  run 3: 175.303969
+
+opt 6: run 1: 166.054643 run 2: 174.738976 run 3: 167.934383
+
+Optimization 4 is faster than the original on average.
+Optimization 6 has the fastest execution time of the 3 tests.
+
+The results demonstrate when keeping threads in a persistent parallel region, manually distributing workloads, and controling synchronization can improve OpenMP performance.
