@@ -15,16 +15,33 @@ Programs were compiled and executed on a VM Ubuntu.
 
 Processor: intel core i5-1135G7
 CPUs: 4
+
 NUMA nodes: 1
+
 OpenMP threads: 4
+
 compiler:GCC
+
 optimization level -02
+
 OpenMP flag: -fopenmp
+
 iterations 10000
 
 ### Execution 
 
 make run-all
+
+### Results 
+
+
+| Optimization        |  Run 1        |      Run 2     |    Run 3   |
+| ------------------- |:-------------:|:--------------:|:----------:|
+| Original( opt 2)    | 215.715404    |  179.836809    | 183.839264 |
+| Opt 4               | 176.336175    |  181.226372    | 175.303969 |
+| Opt 6               |  166.054643   |  174.738976    | 167.934383 |
+
+
 
 ## Assignment questions 
 
